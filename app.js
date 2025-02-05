@@ -38,7 +38,7 @@ let clearInput = ()=>{
     dato.value = "";
 }
 
-//Funcion agregar amigo
+//Funcion agregar amigo loco
 
 function agregarAmigo(){
     if(dato.value != ""){
