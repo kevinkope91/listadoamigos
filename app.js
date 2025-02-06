@@ -14,20 +14,25 @@ let sorteo = document.getElementById("resultado");
 
 // Funcion Sorteo
 function sortearAmigo(){
+    limpiarListado();
     let random = Math.floor(Math.random()*listado.length)
     let li = document.createElement("li")
-    li.textContent = listado[random]
+    li.textContent = `Ganador Sorteo: ${listado[random].toUpperCase()}`;
     sorteo.appendChild(li)
+    listado = [];
 }
 
 // Funcion limpiar y agregar amigos
 
 let addAmigos = ()=>{
-    listaAmigos.innerHTML = "";
+    limpiarListado();
+    sorteo.innerHTML = "";
     for(let i=0; i < listado.length;i++){
         let li = document.createElement("li");
-        li.textContent = listado[i];
+        li.textContent = listado[i].toUpperCase();
+        li.classList.add("usuario")
         listaAmigos.appendChild(li)
+        
 
     }
 }
@@ -38,6 +43,12 @@ let clearInput = ()=>{
     dato.value = "";
 }
 
+
+// Funcion limpiar listado
+
+function limpiarListado(){
+    listaAmigos.innerHTML = "";
+}
 //Funcion agregar amigo loco
 
 function agregarAmigo(){

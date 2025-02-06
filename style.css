@@ -160,3 +160,12 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+.usuario{
+    background-color: var(--color-button);
+    border-radius: 25%;
+    padding:15px;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-white);
+}
